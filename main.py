@@ -1,16 +1,11 @@
+'''You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
 
-'''The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+You may assume the two numbers do not contain any leading zero, except the number 0 itself.
 
-Find the sum of all the primes below two million.'''
+Example:
 
-def sumPrimes(n):
-    sum, sieve = 0, [True] * n
-    for p in range(2, n):
-        if sieve[p]:
-            sum += p
-            for i in range(p*p, n, p):
-                sieve[i] = False
-    return sum
-
-print (sumPrimes(2000000))
+Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+Output: 7 -> 0 -> 8
+Explanation: 342 + 465 = 807.
+'''
 
